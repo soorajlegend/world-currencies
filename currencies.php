@@ -8,7 +8,6 @@ require "./sniper.php";
 if($_SERVER['REQUEST_METHOD'] == 'GET'){
 
     $all_currencies = selectAll("currency", null, "country ASC");
-
     if(count($all_currencies)  > 0){
         $currencies = array();
         foreach($all_currencies as $currency){
