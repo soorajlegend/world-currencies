@@ -12,6 +12,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
         $currencies = array();
         foreach($all_currencies as $currency){
             array_push($currencies, array(
+                "id" => $currency['id'],
                 "country" => $currency['country'],
                 "currency" => $currency['currency'],
                 "code" => $currency['code'],
@@ -24,7 +25,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
     }
 
     echo json_encode([
-        "message" => "no currencies available"
+        "message" => "No currencies available"
     ]);
     return;
 }
